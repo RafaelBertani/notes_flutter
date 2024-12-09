@@ -11,12 +11,13 @@ class Add_Item_Page extends StatefulWidget {
 }
 
 class _Add_Item_PageState extends State<Add_Item_Page> {
-  void add_new_item(Item new_item, SizedBox box) {
+
+  void addNewItem(Item newItem, SizedBox box) {
     setState(() {
       if (widget.content.isEmpty) {
         widget.content.add(box);
       }
-      widget.content.add(new_item);
+      widget.content.add(newItem);
       widget.content.add(box);
     });
   }
@@ -26,6 +27,7 @@ class _Add_Item_PageState extends State<Add_Item_Page> {
 
   @override
   Widget build(BuildContext context) {
+
     double screenWidth = MediaQuery.of(context).size.width;
     double safeAreaWidth = MediaQuery.of(context).viewInsets.right +
         MediaQuery.of(context).viewInsets.left;
@@ -112,9 +114,8 @@ class _Add_Item_PageState extends State<Add_Item_Page> {
             child: ElevatedButton(
               onPressed: () {
                 setState(() {
-                  add_new_item(
+                  addNewItem(
                       Item(
-                        // content: content,
                         width: usableScreenWidth,
                         height: usableScreenHeight,
                         name_item1: textController1.text,

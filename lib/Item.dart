@@ -1,17 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:notes_flutter/main.dart';
-import 'package:notes_flutter/Add_Item_Page.dart';
 
 class Item extends StatefulWidget {
   Item({
     super.key,
-    // required this.content,
     required this.width,
     required this.height,
     required this.name_item1,
     required this.name_item2,
   });
-  // List<Widget> content;
   final double width;
   final double height;
   final String name_item1;
@@ -22,6 +19,7 @@ class Item extends StatefulWidget {
 }
 
 class _ItemState extends State<Item> {
+  
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -48,9 +46,13 @@ class _ItemState extends State<Item> {
               child: IconButton(
                 onPressed: () => {
                   setState(() {
-                    //remove this item
-                    //widget.content.remove(this.widget);
+                    for (int i = 0; i < content.length; i++) {
+                      if (widget == content[i]) {
+                        content.removeWhere((item) => (item == content[i] || item == content[i+1]) );
+                      }
+                    }
                   }),
+                  Navigator.pushReplacement(context,MaterialPageRoute(builder: (BuildContext context) => VerticalScrollView(cont: content))),
                 },
                 icon: const Icon(Icons.delete, color: Color(0xFFFF0000)),
               )),
