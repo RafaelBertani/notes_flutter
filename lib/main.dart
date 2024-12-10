@@ -25,7 +25,7 @@ class _VerticalScrollViewState extends State<VerticalScrollView> {
 
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color(0xFF0000FF),
+        backgroundColor: const Color(0xFF003399),
         title: const Center(child: Text('Notes')),
       ),
       backgroundColor: const Color(0xFF444499),

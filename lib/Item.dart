@@ -27,7 +27,7 @@ class _ItemState extends State<Item> {
       //item
       width: widget.width * 0.9,
       height: widget.height * 0.2,
-      color: const Color(0xFF0000FF),
+      color: const Color(0xFF003399),
       child: Stack(
         children: [
           Positioned(

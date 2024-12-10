@@ -50,7 +50,7 @@ class _Add_Item_PageState extends State<Add_Item_Page> {
 
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color(0xFF0000FF),
+        backgroundColor: const Color(0xFF003399),
         title: const Center(
           child: Text('Add new item'),
         ),
